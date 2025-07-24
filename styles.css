@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #0077cc;
+  --cor-secundaria: #f0f0f0;
+  --fonte-principal: Arial, sans-serif;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-secundaria);
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Layout com Flexbox e Grid */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#foto-perfil {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  gap: 20px;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+article {
+  margin-top: 10px;
+  padding: 10px;
+  border-left: 4px solid var(--cor-primaria);
+}
+
+aside {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+/* Pseudo-elementos */
+section::before {
+  content: "★ ";
+  color: var(--cor-primaria);
+}
+
+/* Pseudo-classes */
+a:hover {
+  color: #005999;
+}
+
+button:focus {
+  outline: 2px solid var(--cor-primaria);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #foto-perfil {
+    width: 100px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+}
